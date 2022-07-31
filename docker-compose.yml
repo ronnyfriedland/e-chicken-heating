@@ -1,0 +1,16 @@
+version: "3.5"
+
+networks:
+  chicken:
+
+services:
+  e-chicken-light:
+    container_name: "e-chicken-heating"
+    build:
+      context: .
+    environment:
+      - URL=https://api.brightsky.dev/current_weather
+      - LAT=51.124439
+      - LNG=13.581610
+    networks:
+      - chicken
