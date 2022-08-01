@@ -47,7 +47,7 @@ try:
                 print("temperature below 0 - turn on heating for {}".format(heating_on_for_seconds))
 
             # turn on the heating
-            create_cron("e-chicken-light-job", "/usr/local/bin/python /usr/src/app/light.py --duration {duration}".format(duration = heating_on_for_seconds), start=now)
+            create_cron("e-chicken-heating-job", "/usr/local/bin/python /usr/src/app/heating.py --duration {duration}".format(duration = heating_on_for_seconds), start=now)
         else:
           print('On {} at {} / {} the temperature was {}.'.
               format(now, config["latitude"], config["longitude"], temperature))
