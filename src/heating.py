@@ -17,16 +17,16 @@ try:
         print("pin: {}".format(config["pin"]))
         print("duration: {}".format(config["duration"]))
 
-    GPIO.setup(config["pin"], GPIO.OUT) # GPIO Modus zuweisen
+    GPIO.setup(int(config["pin"]), GPIO.OUT) # GPIO Modus zuweisen
 
     if config["verbose"] is True:
         print("set pin to HIGH")
-    GPIO.output(config["pin"], GPIO.HIGH) # an
+    GPIO.output(int(config["pin"]), GPIO.HIGH) # an
 
-    time.sleep(config["duration"])
+    time.sleep(int(config["duration"]))
 
     if config["verbose"] is True:
         print("set pin to LOW")
-    GPIO.output(config["pin"], GPIO.LOW) # aus
+    GPIO.output(int(config["pin"]), GPIO.LOW) # aus
 finally:
     GPIO.cleanup()
