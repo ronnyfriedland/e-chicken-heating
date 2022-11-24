@@ -8,6 +8,8 @@ services:
     container_name: "e-chicken-heating"
     build:
       context: .
+    ports:
+      - 5002:5000
     environment:
       - URL=https://api.brightsky.dev/current_weather
       - LAT=51.124439

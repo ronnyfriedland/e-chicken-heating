@@ -17,7 +17,7 @@ config = vars(args)
 
 
 now = datetime.datetime.now()
-heating_on_for_seconds = 7200
+heating_on_for_seconds = 5 * 60 * 60
 
 
 # Get today's sunrise and sunset in UTC
