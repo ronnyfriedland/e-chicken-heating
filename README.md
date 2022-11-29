@@ -1,5 +1,7 @@
 # e-chicken-heating
 
+[![Pylint](https://github.com/ronnyfriedland/e-chicken-heating/actions/workflows/pylint.yml/badge.svg)](https://github.com/ronnyfriedland/e-chicken-heating/actions/workflows/pylint.yml)
+
 ## Context
 
 The following diagram illustrates the context of this component.
