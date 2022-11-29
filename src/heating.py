@@ -1,6 +1,10 @@
-import RPi.GPIO as GPIO
+"""
+Control gpio
+"""
 import time
 import argparse
+
+from RPi import GPIO
 
 GPIO.setmode(GPIO.BCM)
 
@@ -14,8 +18,8 @@ config = vars(args)
 
 try:
     if config["verbose"] is True:
-        print("pin: {}".format(config["pin"]))
-        print("duration: {}".format(config["duration"]))
+        print(f"pin: {config['pin']}")
+        print(f"duration: {config['duration']}")
 
     GPIO.setup(int(config["pin"]), GPIO.OUT)
 
